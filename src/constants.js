@@ -36,65 +36,58 @@ export const PROCESS_STEPS = [
 
 export const PROJECTS = [
   {
-    image: 'https://picsum.photos/seed/project1/600/400',
-    title: 'Fintech Dashboard',
-    description: 'A comprehensive analytics dashboard for a leading financial services company.',
-    tech: ['React', 'TypeScript', 'D3.js', 'Node.js']
+    image: '/projects/valyo.png', // Add your first project image here
+    title: 'Valyo',
+    description: 'Mobile app to see your true cost of mobile value',
+    tech: ['React', 'Node.js', 'MongoDB, spline 3D'], // Update with your actual tech stack
+    website: 'https://valyo-4ny2mxxi0-sachin-bks-projects.vercel.app/' // Add your project URL
   },
   {
-    image: 'https://picsum.photos/seed/project2/600/400',
-    title: 'E-commerce Platform',
-    description: 'A scalable online marketplace for artisanal goods with integrated payments.',
-    tech: ['Vue.js', 'Stripe', 'Firebase', 'Tailwind CSS']
+    image: '/projects/komorebi.png', 
+    title: 'Komorebi sushibar',
+    description: 'an awesome sushi resturant website with order system',
+    tech: ['Html', 'css', 'Oracle GloriaFood'], 
+    website: 'https://komorebi-sushibar.be/' 
   },
   {
-    image: 'https://picsum.photos/seed/project3/600/400',
-    title: 'Health & Wellness App',
-    description: 'A cross-platform mobile app for tracking fitness and nutrition goals.',
-    tech: ['React Native', 'GraphQL', 'PostgreSQL']
+    image: '/projects/sinister-stiches.png', 
+    title: 'inister-stiches',
+    description: 'a project to tell real stories',
+    tech: ['HTML', 'Css'], 
+    website: 'https://sinister-stiches.vercel.app/'
   },
-  {
-    image: 'https://picsum.photos/seed/project4/600/400',
-    title: 'SaaS Collaboration Tool',
-    description: 'A real-time project management tool for creative agencies.',
-    tech: ['SvelteKit', 'WebSockets', 'MongoDB']
-  },
-  {
-    image: 'https://picsum.photos/seed/project5/600/400',
-    title: 'AI-Powered Chatbot',
-    description: 'An intelligent customer service chatbot for an enterprise client.',
-    tech: ['Python', 'Rasa', 'Docker', 'Kubernetes']
-  },
-  {
-    image: 'https://picsum.photos/seed/project6/600/400',
-    title: 'IoT Home Automation',
-    description: 'A system for controlling and monitoring smart home devices.',
-    tech: ['Go', 'MQTT', 'InfluxDB', 'Grafana']
-  },
+  // Add more projects as needed
+  // {
+  //   image: '/projects/project4.jpg',
+  //   title: 'Project Name 4',
+  //   description: 'Description of your fourth real project.',
+  //   tech: ['React Native', 'Firebase', 'Express.js'],
+  //   website: 'https://your-fourth-project.com'
+  // },
 ];
 
-export const TEAM_MEMBERS = [
-  {
-    photo: 'https://picsum.photos/seed/team1/400/400',
-    name: 'Alex Johnson',
-    title: 'Founder & CEO'
-  },
-  {
-    photo: 'https://picsum.photos/seed/team2/400/400',
-    name: 'Maria Garcia',
-    title: 'Lead Designer'
-  },
-  {
-    photo: 'https://picsum.photos/seed/team3/400/400',
-    name: 'David Chen',
-    title: 'Principal Engineer'
-  },
-  {
-    photo: 'https://picsum.photos/seed/team4/400/400',
-    name: 'Priya Patel',
-    title: 'Project Manager'
-  },
-];
+// export const TEAM_MEMBERS = [
+//   {
+//     photo: 'https://picsum.photos/seed/team1/400/400',
+//     name: 'Alex Johnson',
+//     title: 'Founder & CEO'
+//   },
+//   {
+//     photo: 'https://picsum.photos/seed/team2/400/400',
+//     name: 'Maria Garcia',
+//     title: 'Lead Designer'
+//   },
+//   {
+//     photo: 'https://picsum.photos/seed/team3/400/400',
+//     name: 'David Chen',
+//     title: 'Principal Engineer'
+//   },
+//   {
+//     photo: 'https://picsum.photos/seed/team4/400/400',
+//     name: 'Priya Patel',
+//     title: 'Project Manager'
+//   },
+// ];
 
 export const TESTIMONIALS = [
   {

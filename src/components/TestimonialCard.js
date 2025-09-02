@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { QuoteIcon } from './icons';
 
 const TestimonialCard = ({ testimonial }) => {
@@ -12,7 +13,7 @@ const TestimonialCard = ({ testimonial }) => {
       <footer className="mt-6">
         <div className="flex items-center">
           <div className="flex-shrink-0">
-            <img className="h-12 w-12 rounded-full object-cover" src={testimonial.photo} alt={testimonial.name} />
+            <Image className="h-12 w-12 rounded-full object-cover" src={testimonial.photo} alt={testimonial.name} width={100} height={100} />
           </div>
           <div className="ml-4">
             <div className="text-base font-medium text-gray-900 dark:text-white">{testimonial.name}</div>

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from "next/link";
 import ParticleCanvas from "@/components/ParticleCanvas";
 import ScrollAnimator from "@/components/ScrollAnimator";
@@ -128,7 +129,7 @@ const HomePage = () => {
               </h2>
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                 A glimpse into our portfolio of successful software development collaborations. 
-                See how we've helped businesses transform their digital presence.
+                See how we&apos;ve helped businesses transform their digital presence.
               </p>
             </ScrollAnimator>
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -161,7 +162,7 @@ const HomePage = () => {
                 What Our Software Development Clients Say
               </h2>
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                Real stories from businesses we've helped succeed with custom software solutions. 
+                Real stories from businesses we&apos;ve helped succeed with custom software solutions. 
                 Our clients trust us to deliver exceptional results.
               </p>
             </ScrollAnimator>
@@ -180,11 +181,13 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
                 <ScrollAnimator>
-                  <img 
-                    src="https://picsum.photos/seed/aboutus/800/600" 
+                  <Image 
+                    src="/about/Logo.svg" 
                     alt="FourkComputing software development team working on innovative projects" 
                     className="rounded-xl neumorphic-shadow"
                     loading="lazy"
+                    width={800}
+                    height={600}
                   />
                 </ScrollAnimator>
                 <ScrollAnimator className="mt-10 lg:mt-0">

@@ -1,7 +1,8 @@
 'use client';
 
-import { TEAM_MEMBERS } from '@/constants';
-import TeamMemberCard from '@/components/TeamMemberCard';
+import Image from 'next/image';
+// import { TEAM_MEMBERS } from '@/constants';
+// import TeamMemberCard from '@/components/TeamMemberCard';
 import CTA from '@/components/CTA';
 import ScrollAnimator from '@/components/ScrollAnimator';
 
@@ -20,7 +21,7 @@ const AboutPage = () => {
       <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
             <ScrollAnimator className="relative">
-                <img src="https://picsum.photos/seed/about-main/800/600" alt="Office environment" className="rounded-xl neumorphic-shadow w-full"/>
+                <Image src="/about/who-we-are.PNG" alt="Office environment" className="rounded-xl neumorphic-shadow w-full" width={800} height={600} />
             </ScrollAnimator>
             <ScrollAnimator className="mt-10 lg:mt-0">
                 <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">Our Mission</h2>
@@ -35,7 +36,7 @@ const AboutPage = () => {
       </div>
       
       {/* Team Section */}
-      <section className="mt-24 py-20 bg-gray-100 dark:bg-gray-900/50">
+      {/* <section className="mt-24 py-20 bg-gray-100 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollAnimator className="text-center">
               <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white">Meet the Team</h2>
@@ -49,7 +50,7 @@ const AboutPage = () => {
               ))}
             </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <CTA />

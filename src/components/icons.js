@@ -1,6 +1,8 @@
 export const LogoIcon = () => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="12" cy="12" r="10" stroke="#3b82f6" strokeWidth="2"/>
+        {/* Vertical line from top to bottom */}
+        <line x1="12" y1="2" x2="12" y2="22" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round"/>
         <path d="M 7 7 L 17 7 L 12 12 L 17 17 L 7 17 L 12 12 L 7 7 Z" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 );
