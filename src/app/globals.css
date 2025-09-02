@@ -1,42 +1,189 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Critical CSS for above-the-fold content */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* SEO-friendly heading hierarchy */
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl font-extrabold;
+  }
+  
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  
+  /* Optimize images for Core Web Vitals */
+  img {
+    @apply max-w-full h-auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Improve link accessibility */
+  a:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Optimize button interactions */
+  button:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@layer components {
+  /* Neumorphic shadows with better performance */
+  .neumorphic-shadow {
+    box-shadow: 
+      20px 20px 60px #d1d5db,
+      -20px -20px 60px #ffffff;
+    will-change: box-shadow;
+  }
+  
+  .neumorphic-shadow-inset {
+    box-shadow: 
+      inset 20px 20px 60px #d1d5db,
+      inset -20px -20px 60px #ffffff;
+    will-change: box-shadow;
+  }
+  
+  .dark .neumorphic-shadow {
+    box-shadow: 
+      20px 20px 60px #111827,
+      -20px -20px 60px #1f2937;
+  }
+  
+  .dark .neumorphic-shadow-inset {
+    box-shadow: 
+      inset 20px 20px 60px #111827,
+      inset -20px -20px 60px #1f2937;
+  }
+  
+  /* Performance-optimized animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  /* Optimize transitions */
+  .transition-optimized {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, opacity;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer utilities {
+  /* Performance utilities */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  .contain-layout {
+    contain: layout;
+  }
+  
+  .contain-paint {
+    contain: paint;
+  }
+  
+  /* SEO-friendly text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Keyframe animations for performance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Print styles for better accessibility */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    @apply text-black bg-white;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .neumorphic-shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dark .neumorphic-shadow {
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-fade-in,
+  .animate-slide-up {
+    animation: none;
   }
 }
